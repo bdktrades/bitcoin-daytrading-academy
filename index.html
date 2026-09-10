@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Day Trading Academy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>₿ Bitcoin Day Trading Academy</h1>
+            <p>Master the Art of Day Trading Bitcoin in 5 Days</p>
+        </header>
+
+        <nav class="nav-tabs">
+            <button class="tab-button active" onclick="showDay(1)">Day 1</button>
+            <button class="tab-button" onclick="showDay(2)">Day 2</button>
+            <button class="tab-button" onclick="showDay(3)">Day 3</button>
+            <button class="tab-button" onclick="showDay(4)">Day 4</button>
+            <button class="tab-button" onclick="showDay(5)">Day 5</button>
+        </nav>
+
+        <!-- DAY 1 -->
+        <div id="day1" class="day-content active">
+            <h2>Day 1: Fundamentals of Bitcoin & Market Basics</h2>
+            
+            <div class="lesson">
+                <h3>What is Bitcoin?</h3>
+                <p>Bitcoin is a decentralized digital currency that operates on a peer-to-peer network without a central authority. Created in 2009 by an anonymous person or group known as Satoshi Nakamoto, Bitcoin uses blockchain technology to record transactions securely.</p>
+                <p><strong>Key Characteristics:</strong></p>
+                <ul>
+                    <li>Limited supply: Only 21 million bitcoins will ever exist</li>
+                    <li>Decentralized: No government or bank controls it</li>
+                    <li>Transparent: All transactions are recorded on the blockchain</li>
+                    <li>Irreversible: Transactions cannot be reversed once confirmed</li>
+                </ul>
+            </div>
+
+            <div class="lesson">
+                <h3>Understanding Price Movement</h3>
+                <p>Bitcoin prices fluctuate based on supply and demand in the market. These price movements create opportunities for day traders. The price is determined by what buyers are willing to pay and what sellers are willing to accept at any given moment.</p>
+                <p><strong>Factors Affecting Bitcoin Price:</strong></p>
+                <ul>
+                    <li>Market demand and adoption rates</li>
+                    <li>Regulatory news and government policies</li>
+                    <li>Macroeconomic factors (inflation, interest rates)</li>
+                    <li>Technological developments and security</li>
+                    <li>Large trades by institutional investors ("whales")</li>
+                </ul>
+            </div>
+
+            <div class="lesson">
+                <h3>Day Trading vs. Long-term Investing</h3>
+                <p><strong>Day Trading:</strong> Buying and selling Bitcoin within the same day or very short timeframes (minutes to hours) to profit from small price movements.</p>
+                <p><strong>Long-term Investing:</strong> Holding Bitcoin for months or years, betting on overall price appreciation.</p>
+                <p>Day trading requires more active monitoring, quick decision-making, and can be more profitable but also riskier than long-term investing.</p>
+            </div>
+
+            <div class="lesson">
+                <h3>Bitcoin Exchanges</h3>
+                <p>To trade Bitcoin, you need access to a cryptocurrency exchange. Popular exchanges include Coinbase, Kraken, Binance, and FTX. These platforms allow you to:</p>
+                <ul>
+                    <li>Deposit fiat currency (USD, EUR, etc.)</li>
+                    <li>Buy and sell Bitcoin</li>
+                    <li>Set price alerts and use trading tools</li>
+                    <li>View real-time price charts and trading volumes</li>
+                </ul>
+            </div>
+
+            <div class="quiz-section">
+                <h3>Day 1 Quiz</h3>
+                <div class="quiz-question">
+                    <p><strong>Question 1:</strong> What is the maximum number of bitcoins that will ever be created?</p>
+                    <label><input type="radio" name="q1" value="a"> 10 million</label>
+                    <label><input type="radio" name="q1" value="b"> 21 million</label>
+                    <label><input type="radio" name="q1" value="c"> Unlimited</label>
+                    <label><input type="radio" name="q1" value="d"> 100 million</label>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 2:</strong> What is the main difference between day trading and long-term investing?</p>
+                    <label><input type="radio" name="q2" value="a"> Day trading involves buying and selling within the same day; long-term investing involves holding for months or years</label>
+                    <label><input type="radio" name="q2" value="b"> There is no difference</label>
+                    <label><input type="radio" name="q2" value="c"> Day trading is always more profitable</label>
+                    <label><input type="radio" name="q2" value="d"> Long-term investing requires more monitoring</label>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 3:</strong> Which of the following can affect Bitcoin's price?</p>
+                    <label><input type="radio" name="q3" value="a"> Regulatory news only</label>
+                    <label><input type="radio" name="q3" value="b"> Market demand and adoption rates only</label>
+                    <label><input type="radio" name="q3" value="c"> All of the above (regulatory news, market demand, macroeconomic factors, technological developments)</label>
+                    <label><input type="radio" name="q3" value="d"> None of the above</label>
+                </div>
+
+                <button class="submit-btn" onclick="submitQuiz(1)">Submit Quiz</button>
+                <div id="quiz1-result" class="quiz-result"></div>
+            </div>
+        </div>
+
+        <!-- DAY 2 -->
+        <div id="day2" class="day-content">
+            <h2>Day 2: Technical Analysis & Chart Reading</h2>
+            
+            <div class="lesson">
+                <h3>What is Technical Analysis?</h3>
+                <p>Technical analysis is the practice of analyzing historical price and volume data to predict future price movements. Day traders rely heavily on technical analysis because it helps identify trends, support/resistance levels, and potential entry/exit points.</p>
+                <p>The core principle: "Price action reflects all known information." This means past price patterns can indicate future movements.</p>
+            </div>
+
+            <div class="lesson">
+                <h3>Reading Candlestick Charts</h3>
+                <p>Candlestick charts display four price points: open, close, high, and low for a specific time period (1 minute, 5 minutes, 1 hour, etc.).</p>
+                <p><strong>Candlestick Components:</strong></p>
+                <ul>
+                    <li><strong>Body (Rectangle):</strong> Shows the opening and closing prices</li>
+                    <li><strong>Green Candle:</strong> Price closed higher than it opened (bullish)</li>
+                    <li><strong>Red Candle:</strong> Price closed lower than it opened (bearish)</li>
+                    <li><strong>Wicks (Shadows):</strong> Show the highest and lowest prices reached during that period</li>
+                </ul>
+                <p>By reading multiple candles in sequence, traders identify trends and reversal patterns.</p>
+            </div>
+
+            <div class="lesson">
+                <h3>Support and Resistance Levels</h3>
+                <p><strong>Support Level:</strong> A price point where Bitcoin has historically found buying pressure, preventing further decline. Traders expect the price to "bounce" off this level.</p>
+                <p><strong>Resistance Level:</strong> A price point where Bitcoin has historically faced selling pressure, preventing further increase. Traders expect the price to "reject" and decline from this level.</p>
+                <p>These levels are crucial for day traders because they mark potential entry and exit points. When price breaks through resistance, it becomes the new support for future corrections.</p>
+            </div>
+
+            <div class="lesson">
+                <h3>Trends and Trend Lines</h3>
+                <p><strong>Uptrend:</strong> A series of higher highs and higher lows. Buyers have control, and prices are generally moving upward.</p>
+                <p><strong>Downtrend:</strong> A series of lower highs and lower lows. Sellers have control, and prices are generally moving downward.</p>
+                <p><strong>Sideways/Ranging Market:</strong> Price moves between two levels without a clear directional bias. Ideal for trading the support and resistance range.</p>
+                <p>Day traders use trend identification to align their trades with the market direction. "The trend is your friend" is a common saying because trading with the trend is statistically more profitable.</p>
+            </div>
+
+            <div class="lesson">
+                <h3>Common Chart Patterns</h3>
+                <p><strong>Head and Shoulders:</strong> A reversal pattern that looks like a head with shoulders on both sides. Signals a potential trend change from bullish to bearish.</p>
+                <p><strong>Double Top/Bottom:</strong> Price fails to break above (top) or below (bottom) a level twice. Indicates weakness and potential reversal.</p>
+                <p><strong>Breakout Pattern:</strong> Price breaks out of a consolidation range with high volume. Often leads to strong directional moves.</p>
+                <p><strong>Wedge Pattern:</strong> Converging trend lines that suggest price must break in one direction soon. Useful for anticipating moves.</p>
+            </div>
+
+            <div class="quiz-section">
+                <h3>Day 2 Quiz</h3>
+                <div class="quiz-question">
+                    <p><strong>Question 1:</strong> What does a green candlestick indicate?</p>
+                    <label><input type="radio" name="q4" value="a"> Price closed lower than it opened</label>
+                    <label><input type="radio" name="q4" value="b"> Price closed higher than it opened (bullish)</label>
+                    <label><input type="radio" name="q4" value="c"> High volatility</label>
+                    <label><input type="radio" name="q4" value="d"> Large trading volume</label>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 2:</strong> What is a resistance level?</p>
+                    <label><input type="radio" name="q5" value="a"> A price point where buyers consistently buy</label>
+                    <label><input type="radio" name="q5" value="b"> A price point where sellers have historically pushed price down</label>
+                    <label><input type="radio" name="q5" value="c"> The lowest price Bitcoin has ever reached</label>
+                    <label><input type="radio" name="q5" value="d"> A support level</label>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 3:</strong> What characterizes an uptrend?</p>
+                    <label><input type="radio" name="q6" value="a"> Lower highs and lower lows</label>
+                    <label><input type="radio" name="q6" value="b"> Higher highs and higher lows</label>
+                    <label><input type="radio" name="q6" value="c"> Sideways price movement</label>
+                    <label><input type="radio" name="q6" value="d"> Sudden price crashes</label>
+                </div>
+
+                <button class="submit-btn" onclick="submitQuiz(2)">Submit Quiz</button>
+                <div id="quiz2-result" class="quiz-result"></div>
+            </div>
+        </div>
+
+        <!-- DAY 3 -->
+        <div id="day3" class="day-content">
+            <h2>Day 3: Technical Indicators & Momentum</h2>
+            
+            <div class="lesson">
+                <h3>What are Technical Indicators?</h3>
+                <p>Technical indicators are mathematical calculations based on price and volume data that help traders identify trends, momentum, and potential reversals. They filter market noise and highlight significant price movements.</p>
+                <p>Most indicators fall into two categories: trend-following (lagging) and momentum (leading). Successful traders use a combination of both.</p>
+            </div>
+
+            <div class="lesson">
+                <h3>Moving Averages (MA)</h3>
+                <p><strong>Simple Moving Average (SMA):</strong> The average closing price over a specific number of periods (e.g., 50-day SMA is the average of the last 50 days' closing prices).</p>
+                <p><strong>Exponential Moving Average (EMA):</strong> Similar to SMA but gives more weight to recent price data, making it more responsive to current price action.</p>
+                <p><strong>How Day Traders Use It:</strong></p>
+                <ul>
+                    <li>Price above a moving average indicates uptrend support</li>
+                    <li>Price below a moving average indicates downtrend weakness</li>
+                    <li>When a fast MA (e.g., 10-day) crosses above a slow MA (e.g., 50-day), it's a bullish signal ("Golden Cross")</li>
+                    <li>When a fast MA crosses below a slow MA, it's a bearish signal ("Death Cross")</li>
+                </ul>
+            </div>
+
+            <div class="lesson">
+                <h3>Relative Strength Index (RSI)</h3>
+                <p>The RSI measures the magnitude of recent price changes to evaluate overbought or oversold conditions. It ranges from 0 to 100.</p>
+                <p><strong>RSI Interpretation:</strong></p>
+                <ul>
+                    <li>RSI above 70: Bitcoin is overbought (may reverse down)</li>
+                    <li>RSI below 30: Bitcoin is oversold (may bounce up)</li>
+                    <li>RSI 50: Neutral, no clear bias</li>
+                </ul>
+                <p><strong>Day Trading Use:</strong> Day traders use RSI divergences as reversal signals. For example, if price makes a new high but RSI doesn't, it suggests weakening momentum and a potential reversal.</p>
+            </div>
+
+            <div class="lesson">
+                <h3>MACD (Moving Average Convergence Divergence)</h3>
+                <p>MACD is a momentum indicator that shows the relationship between two moving averages of a security's price.</p>
+                <p><strong>Components:</strong></p>
+                <ul>
+                    <li><strong>MACD Line:</strong> The difference between a 26-day EMA and 12-day EMA</li>
+                    <li><strong>Signal Line:</strong> A 9-day EMA of the MACD Line</li>
+                    <li><strong>Histogram:</strong> The difference between MACD Line and Signal Line</li>
+                </ul>
+                <p><strong>Trading Signals:</strong></p>
+                <ul>
+                    <li>MACD crosses above the signal line = Bullish (buy signal)</li>
+                    <li>MACD crosses below the signal line = Bearish (sell signal)</li>
+                    <li>Positive histogram = Upward momentum</li>
+                    <li>Negative histogram = Downward momentum</li>
+                </ul>
+            </div>
+
+            <div class="lesson">
+                <h3>Bollinger Bands</h3>
+                <p>Bollinger Bands consist of a middle moving average with two standard deviation bands above and below it. They help identify volatility and potential reversal points.</p>
+                <p><strong>How They Work:</strong></p>
+                <ul>
+                    <li>When price touches the upper band, Bitcoin may be overbought</li>
+                    <li>When price touches the lower band, Bitcoin may be oversold</li>
+                    <li>When bands widen, volatility is increasing (opportunity for big moves)</li>
+                    <li>When bands narrow, volatility is decreasing (potential for a breakout)</li>
+                </ul>
+                <p>Day traders often scalp (take small profits) when price bounces off the bands.</p>
+            </div>
+
+            <div class="quiz-section">
+                <h3>Day 3 Quiz</h3>
+                <div class="quiz-question">
+                    <p><strong>Question 1:</strong> What does it mean when RSI is above 70?</p>
+                    <label><input type="radio" name="q7" value="a"> Bitcoin is oversold</label>
+                    <label><input type="radio" name="q7" value="b"> Bitcoin is overbought (may reverse down)</label>
+                    <label><input type="radio" name="q7" value="c"> Price is at support level</label>
+                    <label><input type="radio" name="q7" value="d"> There is strong buying pressure</label>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 2:</strong> What is a "Golden Cross" in moving averages?</p>
+                    <label><input type="radio" name="q8" value="a"> When price touches the upper Bollinger Band</label>
+                    <label><input type="radio" name="q8" value="b"> When a fast moving average crosses above a slow moving average (bullish signal)</label>
+                    <label><input type="radio" name="q8" value="c"> When RSI reaches 100</label>
+                    <label><input type="radio" name="q8" value="d"> When MACD crosses below zero</label>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 3:</strong> What does a narrowing Bollinger Band indicate?</p>
+                    <label><input type="radio" name="q9" value="a"> Increasing volatility</label>
+                    <label><input type="radio" name="q9" value="b"> Price is overbought</label>
+                    <label><input type="radio" name="q9" value="c"> Decreasing volatility and potential for a breakout</label>
+                    <label><input type="radio" name="q9" value="d"> Strong uptrend</label>
+                </div>
+
+                <button class="submit-btn" onclick="submitQuiz(3)">Submit Quiz</button>
+                <div id="quiz3-result" class="quiz-result"></div>
+            </div>
+        </div>
+
+        <!-- DAY 4 -->
+        <div id="day4" class="day-content">
+            <h2>Day 4: Risk Management & Trading Strategies</h2>
+            
+            <div class="lesson">
+                <h3>The Importance of Risk Management</h3>
+                <p>Risk management is the most critical aspect of successful day trading. No matter how good your analysis is, proper position sizing and stop losses can make the difference between a profitable trader and one who loses their capital.</p>
+                <p>The golden rule: <strong>Never risk more than you can afford to lose, and never risk more than 1-2% of your trading account on a single trade.</strong></p>
+            </div>
+
+            <div class="lesson">
+                <h3>Position Sizing</h3>
+                <p>Position size is the amount of Bitcoin (or USD equivalent) you trade on each position. Proper position sizing ensures that if you lose on a trade, you don't wipe out your account.</p>
+                <p><strong>Example:</strong> If your trading account is $10,000 and you risk 1% per trade:</p>
+                <ul>
+                    <li>Risk per trade: $100</li>
+                    <li>If your stop loss is 50 pips away, you can only buy a certain amount of Bitcoin to limit loss to $100</li>
+                    <li>Larger account allows larger positions; smaller account requires smaller positions</li>
+                </ul>
+                <p>Day traders often use leverage to amplify returns, but this amplifies losses too. A 2x leverage means 2% loss becomes 4% loss.</p>
+            </div>
+
+            <div class="lesson">
+                <h3>Stop Loss Orders</h3>
+                <p>A stop loss is an order to sell Bitcoin at a predetermined price if the trade goes against you. It's your safety net to limit losses.</p>
+                <p><strong>How to Set Stop Loss:</strong></p>
+                <ul>
+                    <li>Place stop loss below a recent support level if going long (buying)</li>
+                    <li>Place stop loss above a recent resistance level if going short (selling)</li>
+                    <li>Use technical levels (support/resistance) rather than arbitrary percentages</li>
+                    <li>Never move your stop loss further away to "give the trade more room"</li>
+                </ul>
+                <p>Successful day traders exit losing trades quickly to preserve capital for winning trades.</p>
+            </div>
+
+            <div class="lesson">
+                <h3>Take Profit Levels</h3>
+                <p>Just as important as stop loss is knowing where to take profits. Day traders often use multiple take profit levels:</p>
+                <ul>
+                    <li><strong>Partial Profit at Resistance:</strong> Sell half position at first resistance to lock in gains</li>
+                    <li><strong>Move Stop to Breakeven:</strong> Once profit reaches 1% or more, move stop to entry price</li>
+                    <li><strong>Trail the Stop Loss:</strong> As price moves favorably, adjust stop loss upward to protect profits</li>
+                    <li><strong>Let Winners Run:</strong> Some traders hold strong trades and only sell when technical signals reverse</li>
+                </ul>
+            </div>
+
+            <div class="lesson">
+                <h3>Common Day Trading Strategies</h3>
+                <p><strong>1. Scalping:</strong> Taking very small profits (1-5 points) on quick trades lasting seconds to minutes. High frequency, tight stops, disciplined profit-taking.</p>
+                <p><strong>2. Range Trading:</strong> Identifying a support/resistance range and buying at support, selling at resistance. Works well when price is sideways (not trending).</p>
+                <p><strong>3. Breakout Trading:</strong> Buying when price breaks above a resistance level or selling when price breaks below a support level. Assumes breakout momentum will continue.</p>
+                <p><strong>4. Momentum Trading:</strong> Trading in the direction of strong volume and momentum. Using RSI, MACD, and price action to identify strong moves and riding them.</p>
+                <p><strong>5. Reversal Trading:</strong> Taking trades against the trend when technical indicators suggest exhaustion (overbought/oversold). Riskier but can be profitable when well-timed.</p>
+            </div>
+
+            <div class="lesson">
+                <h3>Risk-Reward Ratio</h3>
+                <p>The risk-reward ratio compares how much you stand to lose versus how much you stand to gain on a trade.</p>
+                <p><strong>Example:</strong> If you risk $100 to make $300, your risk-reward ratio is 1:3 (you risk $1 to make $3).</p>
+                <p><strong>Guidelines:</strong></p>
+                <ul>
+                    <li>Minimum ratio should be 1:2 (risk $1 to make $2)</li>
+                    <li>Better ratio is 1:3 or higher</li>
+                    <li>A trade with 1:3 ratio only needs 33% win rate to be profitable long-term</li>
+                    <li>A trade with 1:1 ratio needs 50%+ win rate to be profitable</li>
+                </ul>
+            </div>
+
+            <div class="quiz-section">
+                <h3>Day 4 Quiz</h3>
+                <div class="quiz-question">
+                    <p><strong>Question 1:</strong> What percentage of your trading account should you risk per trade?</p>
+                    <label><input type="radio" name="q10" value="a"> 5-10%</label>
+                    <label><input type="radio" name="q10" value="b"> 1-2% or less</label>
+                    <label><input type="radio" name="q10" value="c"> 10-20%</label>
+                    <label><input type="radio" name="q10" value="d"> As much as possible to maximize profits</label>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 2:</strong> Where should you place a stop loss when going long (buying)?</p>
+                    <label><input type="radio" name="q11" value="a"> Above a recent resistance level</label>
+                    <label><input type="radio" name="q11" value="b"> Below a recent support level</label>
+                    <label><input type="radio" name="q11" value="c"> At your entry price</label>
+                    <label><input type="radio" name="q11" value="d"> 50% below your entry price</label>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 3:</strong> What does a 1:3 risk-reward ratio mean?</p>
+                    <label><input type="radio" name="q12" value="a"> You risk $3 to make $1</label>
+                    <label><input type="radio" name="q12" value="b"> You risk $1 to make $3</label>
+                    <label><input type="radio" name="q12" value="c"> Your stop loss is 3x your take profit</label>
+                    <label><input type="radio" name="q12" value="d"> You should close the trade at 3 different levels</label>
+                </div>
+
+                <button class="submit-btn" onclick="submitQuiz(4)">Submit Quiz</button>
+                <div id="quiz4-result" class="quiz-result"></div>
+            </div>
+        </div>
+
+        <!-- DAY 5 -->
+        <div id="day5" class="day-content">
+            <h2>Day 5: Psychology, Execution & Getting Started</h2>
+            
+            <div class="lesson">
+                <h3>Trading Psychology</h3>
+                <p>The difference between successful and unsuccessful traders often comes down to psychology. Technical skills matter, but emotional discipline is what separates winners from losers.</p>
+                <p><strong>Common Psychological Mistakes:</strong></p>
+                <ul>
+                    <li><strong>FOMO (Fear of Missing Out):</strong> Chasing trades late into moves without proper setup. Results in buying at resistance and getting stopped out.</li>
+                    <li><strong>Revenge Trading:</strong> After a loss, making larger trades to "get the money back quickly." Leads to bigger losses.</li>
+                    <li><strong>Overconfidence:</strong> After a few wins, increasing position size and taking excessive risk. Markets punish overconfidence.</li>
+                    <li><strong>Hesitation:</strong> Seeing a perfect setup but not executing due to fear. Missing winners.</li>
+                    <li><strong>Holding Losers:</strong> Refusing to accept a loss and holding hoping for recovery. Ties up capital in dead money.</li>
+                </ul>
+            </div>
+
+            <div class="lesson">
+                <h3>Developing a Trading Plan</h3>
+                <p>Successful day traders operate from a written trading plan. This plan removes emotions and ensures consistency.</p>
+                <p><strong>Your Trading Plan Should Include:</strong></p>
+                <ul>
+                    <li><strong>Market Conditions:</strong> When will you trade? (trending market vs. ranging market)</li>
+                    <li><strong>Entry Signals:</strong> What exact conditions trigger a buy or sell?</li>
+                    <li><strong>Position Size:</strong> How much Bitcoin will you trade per setup?</li>
+                    <li><strong>Stop Loss Placement:</strong> Where is your exit if wrong?</li>
+                    <li><strong>Profit Targets:</strong> Where will you take profits?</li>
+                    <li><strong>Risk-Reward Ratio:</strong> What minimum ratio will you accept?</li>
+                    <li><strong>Time Commitment:</strong> How many hours per day will you monitor trades?</li>
+                </ul>
+                <p>Stick to your plan even when it feels wrong. Deviation from plan is usually what causes losses.</p>
+            </div>
+
+            <div class="lesson">
+                <h3>Discipline and Emotional Control</h3>
+                <p>The best traders aren't necessarily the smartest, but the most disciplined. Discipline means:</p>
+                <ul>
+                    <li><strong>Following Your Rules:</strong> Taking every signal, not cherry-picking trades</li>
+                    <li><strong>Respecting Stop Losses:</strong> Never moving a stop loss further away or closing it to "give the trade more room"</li>
+                    <li><strong>Taking Profits:</strong> Not being greedy and letting profits vanish</li>
+                    <li><strong>Avoiding Revenge Trades:</strong> Sitting out after a loss to clear your head</li>
+                    <li><strong>Accepting Losses:</strong> Understanding losses are part of trading, not personal failures</li>
+                    <li><strong>Regular Breaks:</strong> Taking breaks during the day to avoid fatigue and poor decisions</li>
+                </ul>
+            </div>
+
+            <div class="lesson">
+                <h3>Demo Trading vs. Live Trading</h3>
+                <p><strong>Demo Trading (Paper Trading):</strong> Trading on a simulated account with no real money. Essential for learning.</p>
+                <p><strong>Benefits of Demo Trading:</strong></p>
+                <ul>
+                    <li>Learn without financial risk</li>
+                    <li>Test your strategy before risking real money</li>
+                    <li>Build confidence and muscle memory</li>
+                    <li>Identify psychological issues before they cost you money</li>
+                </ul>
+                <p><strong>When to Move to Live Trading:</strong></p>
+                <ul>
+                    <li>After consistent profitability on demo for at least 2-4 weeks</li>
+                    <li>Win rate above 50% with positive risk-reward ratio</li>
+                    <li>Ability to stick to your trading plan without emotional interference</li>
+                    <li>Only with money you can afford to lose</li>
+                </ul>
+                <p>Many successful traders demo trade for months before going live. There's no rush.</p>
+            </div>
+
+            <div class="lesson">
+                <h3>Your First Steps to Becoming a Day Trader</h3>
+                <p><strong>1. Education (This Week):</strong> Continue learning about markets, indicators, and strategies.</p>
+                <p><strong>2. Choose a Strategy:</strong> Pick ONE strategy to master. Don't try to do everything at once.</p>
+                <p><strong>3. Demo Trading (Week 2-4):</strong> Spend 2-4 weeks on a practice account. Trade your strategy repeatedly.</p>
+                <p><strong>4. Keep a Trading Journal:</strong> Record every trade with entry, exit, reason, outcome. Review weekly.</p>
+                <p><strong>5. Track Your Stats:</strong> Win rate, average win, average loss, risk-reward ratio. These metrics matter more than profit.</p>
+                <p><strong>6. Live Trading (Small):</strong> Start with minimum position sizes. Gradually increase as you prove consistency.</p>
+                <p><strong>7. Never Stop Learning:</strong> Review your trades, read books, watch videos. Markets evolve and so should you.</p>
+            </div>
+
+            <div class="lesson">
+                <h3>Warning Signs & Common Pitfalls</h3>
+                <p><strong>If you experience these, STOP trading and reassess:</strong></p>
+                <ul>
+                    <li>Three losing trades in a row without following your plan</li>
+                    <li>Trading during low liquidity hours (fewer traders, wider spreads)</li>
+                    <li>Trading on emotions rather than your setup signals</li>
+                    <li>Increasing position size after losses</li>
+                    <li>Trading with money you need for living expenses</li>
+                    <li>Spending more than 4-6 hours per day staring at charts</li>
+                    <li>Not using stop losses</li>
+                </ul>
+                <p>These are red flags that you're not following the rules or that your strategy isn't working. Fix them before continuing.</p>
+            </div>
+
+            <div class="quiz-section">
+                <h3>Day 5 Quiz</h3>
+                <div class="quiz-question">
+                    <p><strong>Question 1:</strong> What is "revenge trading"?</p>
+                    <label><input type="radio" name="q13" value="a"> Taking larger trades after a loss to quickly recover the money</label>
+                    <label><input type="radio" name="q13" value="b"> Selling a stock after it rises and you missed the move</label>
+                    <label><input type="radio" name="q13" value="c"> Taking profits too quickly</label>
+                    <label><input type="radio" name="q13" value="d"> Holding a losing trade too long</label>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 2:</strong> What should your trading plan include?</p>
+                    <label><input type="radio" name="q14" value="a"> Entry signals only</label>
+                    <label><input type="radio" name="q14" value="b"> Position size and stop loss only</label>
+                    <label><input type="radio" name="q14" value="c"> Market conditions, entry signals, position size, stop loss, profit targets, and risk-reward ratio</label>
+                    <label><input type="radio" name="q14" value="d"> Your profit target only</label>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 3:</strong> How long should you demo trade before going live?</p>
+                    <label><input type="radio" name="q15" value="a"> One week</label>
+                    <label><input type="radio" name="q15" value="b"> Two to four weeks of consistent profitability</label>
+                    <label><input type="radio" name="q15" value="c"> Never, jump straight to live trading</label>
+                    <label><input type="radio" name="q15" value="d"> Six months minimum</label>
+                </div>
+
+                <button class="submit-btn" onclick="submitQuiz(5)">Submit Quiz</button>
+                <div id="quiz5-result" class="quiz-result"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
